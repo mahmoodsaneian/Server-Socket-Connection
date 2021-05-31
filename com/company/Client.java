@@ -25,11 +25,9 @@ public class Client {
 
             System.out.println("client is started");
             String input ="";
-            while (!(input.equals("over"))){
+            while (true){
                 System.out.println("enter your word");
                 input = scanner.next();
-                if (input.equals("over"))
-                    break;
                 dataOutputStream.writeUTF(input);
                 System.out.println(dataInputStream.readUTF());
             }
